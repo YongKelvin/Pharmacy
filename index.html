@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="title">WellPharmacy</div>   
+
+        <!-- Category Buttons -->
+        <nav class="category-buttons">
+            <button class="category-btn" data-category="newArrival">New Arrival</button>
+            <button class="category-btn" data-category="skinCare">Skin Care</button>
+            <button class="category-btn" data-category="personalCare">Personal Care</button>
+            <button class="category-btn" data-category="healthFood">Health Food</button>
+            <button class="category-btn" data-category="medicalSupply">Medical Supply</button>
+            <button class="category-btn" data-category="momBaby">Mom & Baby</button>
+            <button class="category-btn" data-category="supplements">Supplements</button>
+        </nav>
+        
+
+            <!-- Dropdown Menu -->
+            <div class="dropdown">
+                <button class="category-btn dropdown-btn">More ▼</button>
+                <div class="dropdown-content">
+                    <a href="#">Perfume & Fragrance</a>
+                    <a href="#">Men's Care</a>
+                    <a href="#">Household</a>
+                </div>
+            </div>
+        </nav>
+
+       <!-- Social Media Icons -->
+       <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="images/instagram.jpg" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="images/facebook.jpg" alt="Facebook">
+        </a>
+        <a href="mailto:example@gmail.com">
+            <img src="images/gmail.jpg" alt="Gmail">
+        </a>
+    </div>
+</header>
+
+    <!-- Search Bar (Moved Below the Categories) -->
+    <div class="search-container">
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Type in Products, Category, Brands">
+            <span class="search-icon">🔍</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- Register & FAQ Buttons -->
+<div class="register-faq-container">
+    <button id="registerBtn">Register</button> | 
+    <button id="faqBtn">FAQ</button>
+</div>
+
+<!-- Register Popup -->
+<div id="registerPopup" class="popup">
+    <div class="popup-content">
+        <span class="close" id="closeRegister">&times;</span>
+        <h2>Register</h2>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</div>
+
+<!-- FAQ Popup -->
+<div id="faqPopup" class="popup">
+    <div class="popup-content">
+        <span class="close" id="closeFaq">&times;</span>
+        <img src="images/FrequentAskedQuestion.png" alt="FAQ">
+    </div>
+</div>
+
+<div class="title-container">
+    <h2 class="new-arrival-title">New Arrival</h2>
+</div>
+
+<div class="product-line">
+<div class="slideshow-container">
+    <img class="promo-slide fade" src="images/Promo1.jpg" alt="Promo 1">
+    <img class="promo-slide fade" src="images/Promo2.jpg" alt="Promo 2">
+    <img class="promo-slide fade" src="images/Promo3.jpg" alt="Promo 3">
+    <img class="promo-slide fade" src="images/Promo4.jpg" alt="Promo 4">
+    <img class="promo-slide fade" src="images/Promo5.jpg" alt="Promo 5">
+
+    <!-- Navigation arrows -->
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+
+
+    <div class="product-carousel">
+        <button class="arrow left-arrow">&#10094;</button>
+        <div class="product-container">
+            <div class="product" data-index="1">
+                <img src="images/NA1.jpg" alt="NUTRITION Cod Liver Oil">
+                <p class="product-name">NUTRITION Cod Liver Oil</p>
+                <p class="product-price">RM 25.00</p>
+            </div>
+            <div class="product" data-index="2">
+                <img src="images/NA2.jpg" alt="DIVINEBOUNTY B-Complex">
+                <p class="product-name">DIVINEBOUNTY B-Complex</p>
+                <p class="product-price">RM 30.00</p>
+            </div>
+            <div class="product" data-index="3">
+                <img src="images/NA3.jpg" alt="NATURE's BOUNTY B-12">
+                <p class="product-name">NATURE's BOUNTY B-12</p>
+                <p class="product-price">RM 20.00</p>
+            </div>
+            <div class="product" data-index="4">
+                <img src="images/NA4.jpg" alt="INLIFE Sea Buckthorn">
+                <p class="product-name">INLIFE Sea Buckthorn</p>
+                <p class="product-price">RM 28.00</p>
+            </div>
+            <div class="product" data-index="5">
+                <img src="images/NA5.jpg" alt="CENTRUM Men Multigummies">
+                <p class="product-name">CENTRUM Men Multigummies</p>
+                <p class="product-price">RM 35.00</p>
+            </div>
+            <div class="product" data-index="6">
+                <img src="images/NA6.jpg" alt="CENTRUM ENERGY">
+                <p class="product-name">CENTRUM ENERGY</p>
+                <p class="product-price">RM 40.00</p>
+            </div>
+            <div class="product" data-index="7">
+                <img src="images/NA7.jpg" alt="CENTRUM B-Vitamins">
+                <p class="product-name">CENTRUM B-Vitamins</p>
+                <p class="product-price">RM 22.00</p>
+            </div>
+            <div class="product" data-index="8">
+                <img src="images/NA8.jpg" alt="NORDIC Cod Liver Oil">
+                <p class="product-name">NORDIC Cod Liver Oil</p>
+                <p class="product-price">RM 27.00</p>
+            </div>
+            <div class="product" data-index="9">
+                <img src="images/NA9.jpg" alt="SOLGAR Vitamin B-12">
+                <p class="product-name">SOLGAR Vitamin B-12</p>
+                <p class="product-price">RM 32.00</p>
+            </div>
+            <div class="product" data-index="10">
+                <img src="images/NA10.jpg" alt="ESN Vitamin Stack">
+                <p class="product-name">ESN Vitamin Stack</p>
+                <p class="product-price">RM 38.00</p>
+            </div>
+        </div>
+        <button class="arrow right-arrow">&#10095;</button>
+    </div>
+</section>
+
+<!-- Skin Care Section -->
+<section class="product-section">
+    <h2 class="section-title">Skin Care</h2>
+    <div class="product-slider">
+        <button class="prev-btn" onclick="scrollSkinCare(-1)">&#10094;</button>
+        <div class="product-container" id="skin-care-container">
+            <div class="product-card"><img src="images/SC1.jpg" alt="Skin Care 1"><p>HAIR BEAUTY Ultra Whitening Serum</p><span>RM 25.00</span></div>
+            <div class="product-card"><img src="images/SC2.jpg" alt="Skin Care 2"><p>BIORE UV Sunscreen</p><span>RM 30.00</span></div>
+            <div class="product-card"><img src="images/SC3.jpg" alt="Skin Care 3"><p>BLISS Eyegel</p><span>RM 28.00</span></div>
+            <div class="product-card"><img src="images/SC4.jpg" alt="Skin Care 4"><p>BLISS Combo SET</p><span>RM 35.00</span></div>
+            <div class="product-card"><img src="images/SC5.jpg" alt="Skin Care 5"><p>CETAPHIL Facial Cleanser</p><span>RM 22.00</span></div>
+            <div class="product-card"><img src="images/SC6.jpg" alt="Skin Care 6"><p>DIFFERIN  Acne Cream</p><span>RM 40.00</span></div>
+            <div class="product-card"><img src="images/SC7.jpg" alt="Skin Care 7"><p>FOREST ESSENTIAL Tonic Mist</p><span>RM 26.00</span></div>
+            <div class="product-card"><img src="images/SC8.jpg" alt="Skin Care 8"><p>FRUIT BABIES</p><span>RM 32.00</span></div>
+            <div class="product-card"><img src="images/SC9.jpg" alt="Skin Care 9"><p>The ORDINARY</p><span>RM 29.00</span></div>
+            <div class="product-card"><img src="images/SC10.jpg" alt="Skin Care 10"><p>TRILOGY COMBO Set </p><span>RM 38.00</span></div>
+        </div>
+        <button class="next-btn" onclick="scrollSkinCare(1)">&#10095;</button>
+    </div>
+</section>
+
+<!-- Personal Care Section -->
+<section class="category">
+    <h2 class="category-title">Personal Care</h2>
+    <div class="product-slider">
+        <button class="prev-btn" onclick="prevSlide('personalCare')">&#10094;</button>
+        <div class="product-container" id="personalCare">
+            <div class="product"><img src="images/PC1.jpg" alt="Personal Care Product 1"><p>CERAve Moisturizing Cream</p><span>RM 25.00</span></div>
+            <div class="product"><img src="images/PC2.jpg" alt="Personal Care Product 2"><p>DOVE Body Wash </p><span>RM 30.00</span></div>
+            <div class="product"><img src="images/PC3.jpg" alt="Personal Care Product 3"><p>HEAD & SHOULDER Classic Clean</p><span>RM 28.00</span></div>
+            <div class="product"><img src="images/PC4.jpg" alt="Personal Care Product 4"><p>COLGATE Brush Extra SOft </p><span>RM 35.00</span></div>
+            <div class="product"><img src="images/PC5.jpg" alt="Personal Care Product 5"><p>COLGATE CAvity Protection</p><span>RM 22.00</span></div>
+            <div class="product"><img src="images/PC6.jpg" alt="Personal Care Product 6"><p>GILLETTE Razors</p><span>RM 40.00</span></div>
+            <div class="product"><img src="images/PC7.jpg" alt="Personal Care Product 7"><p>VaSELINE Lip Therapy </p><span>RM 38.00</span></div>
+            <div class="product"><img src="images/PC8.jpg" alt="Personal Care Product 8"><p>LIBRESSE Sanitary Pad</p><span>RM 27.00</span></div>
+            <div class="product"><img src="images/PC9.jpg" alt="Personal Care Product 9"><p>DOVE Soap Bar</p><span>RM 33.00</span></div>
+            <div class="product"><img src="images/PC10.jpg" alt="Personal Care Product 10"><p>HEAD & SHOULDER Shampoo</p><span>RM 29.00</span></div>
+        </div>
+        <button class="next-btn" onclick="nextSlide('personalCare')">&#10095;</button>
+    </div>
+</section>
+
+<!-- Health Food Section -->
+<section class="category">
+    <h2 class="section-title">Health Food</h2>
+    <div class="product-slider">
+        <button class="prev-btn" onclick="prevSlide('healthFood')">&#10094;</button>
+        <div class="product-container" id="healthFood">
+            <div class="product-card"><img src="images/HF1.jpg" alt="Health Food 1"><p>GoodHealth Milk Powder</p><span>RM 25.00</span></div>
+            <div class="product-card"><img src="images/HF2.jpg" alt="Health Food 2"><p>ORGANIC PU ERH TEA</p><span>RM 30.00</span></div>
+            <div class="product-card"><img src="images/HF3.jpg" alt="Health Food 3"><p>GOOD THINS</p><span>RM 28.00</span></div>
+            <div class="product-card"><img src="images/HF4.jpg" alt="Health Food 4"><p>GRAPE NUTS</p><span>RM 35.00</span></div>
+            <div class="product-card"><img src="images/HF5.jpg" alt="Health Food 5"><p>FRESH SUCCESS NUTS</p><span>RM 22.00</span></div>
+            <div class="product-card"><img src="images/HF6.jpg" alt="Health Food 6"><p>BRUNEUS NUTS</p><span>RM 40.00</span></div>
+            <div class="product-card"><img src="images/HF7.jpg" alt="Health Food 7"><p>EQUATE Meal Replacement</p><span>RM 26.00</span></div>
+            <div class="product-card"><img src="images/HF8.jpg" alt="Health Food 8"><p>THINK Protein Bars</p><span>RM 32.00</span></div>
+            <div class="product-card"><img src="images/HF9.jpg" alt="Health Food 9"><p>DELUXE Mixed Nuts</p><span>RM 29.00</span></div>
+            <div class="product-card"><img src="images/HF10.jpg" alt="Health Food 10"><p>NATURE VALLEY Crunchy</p><span>RM 38.00</span></div>
+        </div>
+        <button class="next-btn" onclick="nextSlide('healthFood')">&#10095;</button>
+    </div>
+</section>
+
+<!-- Medical Supply Section -->
+<section class="category">
+    <h2 class="category-title">Medical Supply</h2>
+    <div class="product-slider">
+        <button class="prev-btn" onclick="prevSlide('medicalSupply')">&#10094;</button>
+        <div class="product-container" id="medicalSupply">
+            <div class="product"><img src="images/MS1.jpg" alt="Medical Supply 1"><p>PROSPAN Cough Syrup</p><span>RM 25.00</span></div>
+            <div class="product"><img src="images/MS2.jpg" alt="Medical Supply 2"><p>WOODS Syrup</p><span>RM 30.00</span></div>
+            <div class="product"><img src="images/MS3.jpg" alt="Medical Supply 3"><p>GAVISCON Double Action</p><span>RM 28.00</span></div>
+            <div class="product"><img src="images/MS4.jpg" alt="Medical Supply 4"><p>KOOLFever</p><span>RM 35.00</span></div>
+            <div class="product"><img src="images/MS5.jpg" alt="Medical Supply 5"><p>KOOLFEVER Cooling Kit</p><span>RM 22.00</span></div>
+            <div class="product"><img src="images/MS6.jpg" alt="Medical Supply 6"><p>RE'NU Fresh Spray</p><span>RM 40.00</span></div>
+            <div class="product"><img src="images/MS7.jpg" alt="Medical Supply 7"><p>AMMELTZ YOKO YOKO</p><span>RM 26.00</span></div>
+            <div class="product"><img src="images/MS8.jpg" alt="Medical Supply 8"><p>ANMUM MAterna Formula</p><span>RM 32.00</span></div>
+            <div class="product"><img src="images/MS9.jpg" alt="Medical Supply 9"><p>NESTLE LActogen</p><span>RM 29.00</span></div>
+            <div class="product"><img src="images/MS10.jpg" alt="Medical Supply 10"><p>SEBAMen Baby Wash</p><span>RM 38.00</span></div>
+        </div>
+        <button class="next-btn" onclick="nextSlide('medicalSupply')">&#10095;</button>
+    </div>
+</section>
+
+<!-- Mom & Baby Section -->
+<section class="category">
+    <h2 class="category-title">Mom & Baby</h2>
+    <div class="product-slider">
+        <button class="prev-btn" onclick="prevSlide('momBaby')">&#10094;</button>
+        <div class="product-container" id="momBaby">
+            <div class="product"><img src="images/MB1.jpg" alt="Mom & Baby 1"><p>PAMPERS Baby-Dry</p><span>RM 25.00</span></div>
+            <div class="product"><img src="images/MB2.jpg" alt="Mom & Baby 2"><p>JOHNSON & JOYSON Wipes</p><span>RM 30.00</span></div>
+            <div class="product"><img src="images/MB3.jpg" alt="Mom & Baby 3"><p>ENFAMIL Formula</p><span>RM 28.00</span></div>
+            <div class="product"><img src="images/MB4.jpg" alt="Mom & Baby 4"><p>JOHNSON's Baby Lotion</p><span>RM 35.00</span></div>
+            <div class="product"><img src="images/MB5.jpg" alt="Mom & Baby 5"><p>AVENT's Philips CREAM</p><span>RM 22.00</span></div>
+            <div class="product"><img src="images/MB6.jpg" alt="Mom & Baby 6"><p>ClearBlue Test Kit</p><span>RM 40.00</span></div>
+            <div class="product"><img src="images/MB7.jpg" alt="Mom & Baby 7"><p>ABENA Sanitary PAD</p><span>RM 26.00</span></div>
+            <div class="product"><img src="images/MB8.jpg" alt="Mom & Baby 8"><p>AVENT's CREAM</p><span>RM 32.00</span></div>
+            <div class="product"><img src="images/MB9.jpg" alt="Mom & Baby 9"><p>LANSINOH Nipple Cream</p><span>RM 29.00</span></div>
+            <div class="product"><img src="images/MB10.jpg" alt="Mom & Baby 10"><p>COSWAY Waist Tight</p><span>RM 38.00</span></div>
+        </div>
+        <button class="next-btn" onclick="nextSlide('momBaby')">&#10095;</button>
+    </div>
+</section>
+
+<!-- Supplements Section -->
+<section class="category">
+    <h2 class="category-title">Supplements</h2>
+    <div class="product-slider">
+        <button class="prev-btn" onclick="prevSlide('supplements')">&#10094;</button>
+        <div class="product-container" id="supplements">
+            <div class="product"><img src="images/SUP1.jpg" alt="Supplement 1"><p>CENTRUM Multivitamin</p><span>RM 25.00</span></div>
+            <div class="product"><img src="images/SUP2.jpg" alt="Supplement 2"><p>NATURES BOUNTY C-500</p><span>RM 30.00</span></div>
+            <div class="product"><img src="images/SUP3.jpg" alt="Supplement 3"><p>CALTRATE Bone Health</p><span>RM 28.00</span></div>
+            <div class="product"><img src="images/SUP4.jpg" alt="Supplement 4"><p>NATUREMADE Fish Oil</p><span>RM 35.00</span></div>
+            <div class="product"><img src="images/SUP5.jpg" alt="Supplement 5"><p>NOW Probiotic-10</p><span>RM 22.00</span></div>
+            <div class="product"><img src="images/SUP6.jpg" alt="Supplement 6"><p>NATUREMADE Iron</p><span>RM 40.00</span></div>
+            <div class="product"><img src="images/SUP7.jpg" alt="Supplement 7"><p>BLACKMORES Glucosamine</p><span>RM 26.00</span></div>
+            <div class="product"><img src="images/SUP8.jpg" alt="Supplement 8"><p>PURELYNATIVE CoQ10</p><span>RM 32.00</span></div>
+            <div class="product"><img src="images/SUP9.jpg" alt="Supplement 9"><p>YOUTHEORY Collagen</p><span>RM 29.00</span></div>
+            <div class="product"><img src="images/SUP10.jpg" alt="Supplement 10"><p>SPRING VALLEY Ginkgo Biloba</p><span>RM 38.00</span></div>
+        </div>
+        <button class="next-btn" onclick="nextSlide('supplements')">&#10095;</button>
+    </div>
+</section>
+
+<!-- Perfume and Fragrance Section -->
+<section class="category">
+    <h2 class="category-title">Perfume and Fragrance</h2>
+    <div class="product-slider">
+        <button class="prev-btn" onclick="prevSlide('perfumeFragrance')">&#10094;</button>
+        <div class="product-container" id="perfumeFragrance">
+            <div class="product"><img src="images/PF1.jpg" alt="Perfume and Fragrance 1"><p>DIOR Black Rose</p><span>RM 50.00</span></div>
+            <div class="product"><img src="images/PF2.jpg" alt="Perfume and Fragrance 2"><p>YOU Intensely</p><span>RM 60.00</span></div>
+            <div class="product"><img src="images/PF3.jpg" alt="Perfume and Fragrance 3"><p>BOSS Blue Diamond</p><span>RM 70.00</span></div>
+            <div class="product"><img src="images/PF4.jpg" alt="Perfume and Fragrance 4"><p>SAUVAGE Dior</p><span>RM 80.00</span></div>
+            <div class="product"><img src="images/PF5.jpg" alt="Perfume and Fragrance 5"><p>AMMERAAT Al-ARAB</p><span>RM 90.00</span></div>
+            <div class="product"><img src="images/PF6.jpg" alt="Perfume and Fragrance 6"><p>SMOKED Dior Essence</p><span>RM 100.00</span></div>
+            <div class="product"><img src="images/PF7.jpg" alt="Perfume and Fragrance 7"><p>POND's MEN</p><span>RM 110.00</span></div>
+            <div class="product"><img src="images/PF8.jpg" alt="Perfume and Fragrance 8"><p>PRIMALLY PURE Oil</p><span>RM 120.00</span></div>
+            <div class="product"><img src="images/PF9.jpg" alt="Perfume and Fragrance 9"><p>VASELINE Men Cleanse</p><span>RM 130.00</span></div>
+            <div class="product"><img src="images/PF10.jpg" alt="Perfume and Fragrance 10"><p>BYREDO Blanche</p><span>RM 140.00</span></div>
+        </div>
+        <button class="next-btn" onclick="nextSlide('perfumeFragrance')">&#10095;</button>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="custom-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Work With Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Shopping Online</h3>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">How To Order</a></li>
+                <li><a href="#">Return & Refund</a></li>
+                <li><a href="#">Shipping & Delivery</a></li>
+                <li><a href="#">Payment Terms</a></li>
+                <li><a href="#">Order Tracking</a></li>
+                <li><a href="#">Fake Products Notice</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>WellPharmacy Membership</h3>
+            <ul>
+                <li><a href="#">Member Benefit</a></li>
+                <li><a href="#">Membership T&C</a></li>
+                <li><a href="#">Membership FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Legal</h3>
+            <ul>
+                <li><a href="#">Privacy Statement</a></li>
+                <li><a href="#">Personal Data Protection Act 2010</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>My Account</h3>
+            <ul>
+                <li><a href="#">Purchase History</a></li>
+                <li><a href="#">Points</a></li>
+                <li><a href="#">Edit Information</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Blog</h3>
+        </div>
+        <div class="footer-section">
+            <h3>Partner Sites</h3>
+            <ul>
+                <li><a href="#">WellPharmacy Corporate Site</a></li>
+                <li><a href="#">WellPharmacy E-Store Website</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="social-icons">
+            <a href="#"><img src="facebook.jpg" alt="Facebook"></a>
+            <a href="#"><img src="instagram.jpg" alt="Instagram"></a>
+            <a href="#"><img src="gmail.jpg" alt="LinkedIn"></a>
+        </div>
+        <div class="payment-icons">
+            <img src="grabpay-icon.png" alt="GrabPay">
+            <img src="visa-icon.png" alt="VISA">
+            <img src="fpx-icon.png" alt="FPX">
+        </div>
+        <p>CARiNG EStore Sdn Bhd <br> Registration No.: 200901038640 (881773-W)</p>
+        <p>No 1, Jalan 51/203A, Kawasan Perindustrian Tiong Nam, Seksyen 51, 46050 Petaling Jaya, Selangor Darul Ehsan.</p>
+    </div>
+</footer>
+<!-- End Footer Section -->

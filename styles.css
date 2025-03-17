@@ -1,0 +1,1138 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centering elements in the header */
+    padding: 10px 20px;
+    background-color: #ff0090;
+    color: white;
+    position: relative;
+}
+
+/* Title */
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    left: 20px;
+}
+
+/* Category Buttons Container */
+.category-container {
+    display: flex;
+    justify-content: center; /* Centers the buttons */
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Category Buttons */
+.category-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.category-btn {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.category-btn:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Dropdown Button */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 130px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+/* Show Dropdown on Click */
+.dropdown.show .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Search Bar Section */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.search-bar {
+    position: relative;
+    width: 50%;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px 35px 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: black;
+    font-size: 14px;
+}
+
+.search-bar input::placeholder {
+    color: lightgray;
+    opacity: 0.7;
+}
+
+/* Search Icon */
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: gray;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    top: 8px;
+    right: 20px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.social-icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* Register & FAQ Buttons */
+.register-faq-container {
+    text-align: right;
+    margin-top: -20px;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.register-faq-container button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.register-faq-container button:hover {
+    text-decoration: underline;
+}
+
+/* Popup General Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 350px;
+    position: relative;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* FAQ Image Styling */
+.popup-content img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.slideshow-container {
+    width: 100%; /* Ensures centering works */
+    display: flex;
+    justify-content: center; /* Centers the slideshow */
+    margin-top: 10px; /* Space below search bar */
+}
+
+.slideshow {
+    width: 50%; /* Adjust the width as needed */
+    max-width: 600px; /* Limit the maximum width */
+    height: 180px; /* 3x the search bar height */
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow */
+}
+
+.slideshow img {
+    width: 100%; /* Ensures images scale properly */
+    height: 100%;
+    object-fit: cover; /* Ensures images fit nicely */
+}
+
+
+.promo-slide {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.promo-slide.active {
+    opacity: 1;
+}
+
+/* Navigation buttons */
+.prev, .next {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.prev { left: 320px; }
+.next { right: 320px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4081; /* Change this color as needed */
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.title-container {
+    position: absolute; /* Take it out of normal flow */
+    top: 500px; /* Adjust as needed */
+    left: 5%; /* Align to the left */
+}
+
+.new-arrival-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4081;
+    text-decoration: underline;
+}
+
+/* Product Carousel */
+.product-carousel {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    align-items: center;
+    margin-top: 450px;
+}
+
+/* Product Container */
+.product-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+    width: max-content; /* Prevents unexpected shrinking */
+}
+
+/* Individual Product */
+.product {
+    flex: 0 0 calc(100% / 5 - 20px); /* Adjusts for 5 products per row */
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 200px; /* Ensures consistency */
+    min-width: 180px; /* Prevents products from shrinking */
+}
+
+/* Ensure the images inside the product are well-sized */
+.product img {
+    width: 100%;
+    height: 150px; /* Fixed height to maintain consistency */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Product Name & Price */
+.product-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.product-price {
+    font-size: 14px;
+    color: #009688;
+}
+
+/* Navigation Arrows */
+.arrow {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* Hover Effect - Slightly enlarge image */
+.product img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover img {
+    transform: scale(1.1); /* Slightly enlarges */
+}
+
+/* Popup Styling */
+.product-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+/* Active popup */
+.product-popup.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Pop-up Content */
+.popup-content {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    max-height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 5px;
+}
+
+/* Close Button */
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
+/* Common Styling for Product Sections */
+.product-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff1493; /* Same pink color as "New Arrival" */
+    margin-bottom: 15px;
+}
+
+/* Slider Container */
+.product-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Product Container */
+.product-container {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    scroll-behavior: smooth;
+}
+
+/* Product Card */
+.product-card {
+    flex: 0 0 18%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 15px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-card p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-card span {
+    font-size: 14px;
+    color: green;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.product-card:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation Arrows */
+.prev-btn, .next-btn {
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-btn {
+    left: 5px;
+}
+
+.next-btn {
+    right: 5px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #d10085;
+}
+
+.category {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.category-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff1493;
+    margin-bottom: 20px;
+}
+
+.product-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.product-container {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    scroll-behavior: smooth;
+}
+
+.product {
+    flex: 0 0 20%;
+    margin: 0 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.product span {
+    color: green;
+    font-weight: bold;
+}
+
+.prev-btn, .next-btn {
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #ff69b4;
+}
+
+/* Common Styling for Product Sections Health Food*/
+.product-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff1493; /* Same pink color as "New Arrival" */
+    margin-bottom: 15px;
+}
+
+/* Slider Container */
+.product-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Product Container */
+.product-container {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    scroll-behavior: smooth;
+}
+
+/* Product Card */
+.product-card {
+    flex: 0 0 18%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 15px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-card p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-card span {
+    font-size: 14px;
+    color: green;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.product-card:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation Arrows */
+.prev-btn, .next-btn {
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-btn {
+    left: 5px;
+}
+
+.next-btn {
+    right: 5px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #d10085;
+}
+
+/* ===================== */
+/* Medical Supply Styling */
+/* ===================== */
+
+.category {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.category-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff1493;
+    margin-bottom: 20px;
+}
+
+.product-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.product-container {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    scroll-behavior: smooth;
+}
+
+.product {
+    flex: 0 0 20%;
+    margin: 0 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.product span {
+    color: green;
+    font-weight: bold;
+}
+
+/* Navigation Arrows */
+.prev-btn, .next-btn {
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #ff69b4;
+}
+
+/* Hover Effect - Slightly enlarge image */
+.product:hover {
+    transform: scale(1.1);
+}
+
+/* ===================== */
+/* Mom & Baby Styling */
+/* ===================== */
+
+.category {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.category-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff1493;
+    margin-bottom: 20px;
+}
+
+.product-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.product-container {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    scroll-behavior: smooth;
+}
+
+.product {
+    flex: 0 0 20%;
+    margin: 0 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.product span {
+    color: green;
+    font-weight: bold;
+}
+
+/* Navigation Arrows */
+.prev-btn, .next-btn {
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #ff69b4;
+}
+
+/* Hover Effect - Slightly enlarge image */
+.product:hover {
+    transform: scale(1.1);
+}
+
+/* ===================== */
+/* Supplements Styling */
+/* ===================== */
+
+.category {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.category-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff1493;
+    margin-bottom: 20px;
+}
+
+.product-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.product-container {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    scroll-behavior: smooth;
+}
+
+.product {
+    flex: 0 0 20%;
+    margin: 0 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.product span {
+    color: green;
+    font-weight: bold;
+}
+
+/* Navigation Arrows */
+.prev-btn, .next-btn {
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #ff69b4;
+}
+
+/* Hover Effect - Slightly enlarge image */
+.product:hover {
+    transform: scale(1.1);
+}
+
+/* ===================== */
+/* Perfume and Fragrance Styling */
+/* ===================== */
+
+.category {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.category-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff1493;
+    margin-bottom: 20px;
+}
+
+.product-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.product-container {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    scroll-behavior: smooth;
+}
+
+.product {
+    flex: 0 0 20%;
+    margin: 0 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.product span {
+    color: green;
+    font-weight: bold;
+}
+
+/* Navigation Arrows */
+.prev-btn, .next-btn {
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #ff69b4;
+}
+
+/* Hover Effect - Slightly enlarge image */
+.product:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Section */
+.custom-footer {
+    background-color: #FF69B4; /* Pink background */
+    color: white;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    width: 20%;
+    min-width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #FFD700; /* Gold hover effect */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid white;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.social-icons, .payment-icons {
+    margin-bottom: 10px;
+}
+
+.social-icons a img, .payment-icons img {
+    width: 30px;
+    margin: 0 5px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover, .payment-icons img:hover {
+    transform: scale(1.1);
+}
